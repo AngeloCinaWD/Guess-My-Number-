@@ -3,8 +3,8 @@
 ////////////////////////////////// GUESS MY NUMBER /////////////////////////////
 
 ////////// functions
-function setSecretNumber(max, min) {
-  return Math.trunc(Math.random() * max) + min;
+function setSecretNumber(max) {
+  return Math.trunc(Math.random() * max) + 1;
 }
 
 function displayMessage(message) {
@@ -28,7 +28,7 @@ function setScore(score) {
 }
 
 ///////// variables
-let secretNumber = setSecretNumber(20, 1);
+let secretNumber = setSecretNumber(20);
 
 let score = 20;
 
@@ -74,7 +74,7 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
 
-  secretNumber = setSecretNumber(20, 1);
+  secretNumber = setSecretNumber(20);
 
   setScore(score);
 
